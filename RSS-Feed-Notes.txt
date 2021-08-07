@@ -1,0 +1,62 @@
+RSS Feed App:
+credit: @CodingWithMitch youtube channel
+
+NICE TO HAVES:
+   dark mode
+   saving threads to favorites tab (does this need database?)
+   all rounder RSS feeder. feed it rss links and it will aggregate it all. Or open new tabs for every diff website
+    
+
+Setting up emulator virtual device
+Adding Samsung S10 skin to Android virtual device manager
+downloading R system image and HASKM
+
+Encountered error: Installed Build Tools revision 31.0.0 is corrupted
+Solution: either downlevel to version 30 or go to following file location:
+C:\Users\Alex\AppData\Local\Android\Sdk\build-tools\31.0.0
+change d8.bat to dx.bat
+and go to C:\Users\Alex\AppData\Local\Android\Sdk\build-tools\31.0.0\lib
+change d8.jar to dx.jar
+
+Added toString() methods to Feed.java, Entry.java, Author.java because it returns memory location otherwise
+
+Changed String author to Author author because it was returning null
+
+For each entry:
+grabbing Entry object: author, title, updated parameters from list of entries.
+   easy, just call entry.getters.
+content tag
+   hard would be getting <content> info. &lt == <  &gt == >
+   Trying to gra the Cdata from content tag
+   copy content tag from xml code
+   paste in HTML viewer
+   copy and paste only info within content tags
+   Run the html viewer on that info
+   copy the output and paste in another html viewer
+   beautify it
+
+creating Thread object
+
+Adding CardViewer
+Editing card layout xml 
+
+Editing activity_main xml
+
+Removing debugging logs
+
+Adding listView to MainActivity.java
+adding CustomListAdapter.java > src code from https://github.com/mitchtabian/CardView/blob/master/CardView/app/src/main/java/tabian/com/cardview/CustomListAdapter.java
+
+Added default image
+Created image loader
+
+Universal Image Loader provides config / control for image loading, caching, displaying
+
+ERROR: reddit images give 403 forbidden error
+TODO: Fix the parsing. It pulls info after .png as well
+
+Making rss feed URL dynamic
+
+Fixed Image error. Had to do wtih reddit encoding. Removed "amp;" with empty string ""
+Mobile app wasn't working at first. Had to wipe data. Probably a memory cache thing. Do cold boot from now on 
+ 
